@@ -10,18 +10,22 @@ class PFC {
     run(choix) {
         this.resBot = this.alea();
         
+        let resultat = null;
         if ((choix === "pierre" && this.resBot === "feuille") || (choix === "ciseaux" && this.resBot === "pierre") || (choix === "feuille" && this.resBot === "ciseaux"))
-            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...`);
+            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...</p>`;
+            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...`);}
         else if ((choix === "feuille" && this.resBot === "pierre") || (choix === "pierre" && this.resBot === "ciseaux") || (choix === "ciseaux" && this.resBot === "feuille"))
-            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !`);
+            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !</p>`;
+            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !`);}
         else if (choix === this.resBot)
-            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !`);
+            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !</p>`;
+            console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !`);}
         else {
+            resultat = `<p>Attention, vous ne pouvez pas jouer ça !`;
             console.log("Attention, vous ne pouvez pas jouer ça !");
         }
+        return resultat;
     }
 }
 
-const robot = new PFC();
-
-// console.log(robot.run());
+module.exports = new PFC();

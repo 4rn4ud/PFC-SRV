@@ -29,8 +29,6 @@ app.get('/',(req, res) => {
 });
 
 app.get('/res',(req, res) => {
-    // res.send(req.query.prenom);
-    let render = `<body id="pfc"></body>`;
-    pfc.robot.run(req.query.choice)
+  let render = `<div id="pfc">${pfc.run(req.query.choice)}</div>`;
   res.send(render);
 });
