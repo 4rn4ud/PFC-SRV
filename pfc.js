@@ -12,13 +12,13 @@ class PFC {
         
         let resultat = null;
         if ((choix === "pierre" && this.resBot === "feuille") || (choix === "ciseaux" && this.resBot === "pierre") || (choix === "feuille" && this.resBot === "ciseaux"))
-            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...</p>`;
+            {resultat = `<pre>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...</pre>`;
             console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez perdu...`);}
         else if ((choix === "feuille" && this.resBot === "pierre") || (choix === "pierre" && this.resBot === "ciseaux") || (choix === "ciseaux" && this.resBot === "feuille"))
-            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !</p>`;
+            {resultat = `<pre>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !</pre>`;
             console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nVous avez gagné !`);}
         else if (choix === this.resBot)
-            {resultat = `<p>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !</p>`;
+            {resultat = `<pre>Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !</pre>`;
             console.log(`Vous: ${choix} \tL'ordinateur: ${this.resBot} \nÉgalité !`);}
         else {
             resultat = `<p>Attention, vous ne pouvez pas jouer ça !`;
